@@ -248,11 +248,11 @@ elif main_section == 'Crypto Exploration':
         ## Bitcoin OHLC and Volume Analysis
     idx = pd.date_range(start='2023-01-01', periods=100, freq='D')
     price_data = {
-        'Open': pd.np.random.randint(10000, 50000, size=(100)),
-        'High': pd.np.random.randint(50000, 70000, size=(100)),
-        'Low': pd.np.random.randint(10000, 40000, size=(100)),
-        'Close': pd.np.random.randint(20000, 60000, size=(100)),
-        'Volume': pd.np.random.randint(100, 1000, size=(100))
+        'Open': np.random.randint(10000, 50000, size=(100)),
+        'High': np.random.randint(50000, 70000, size=(100)),
+        'Low': np.random.randint(10000, 40000, size=(100)),
+        'Close': np.random.randint(20000, 60000, size=(100)),
+        'Volume': np.random.randint(100, 1000, size=(100))
     }
     df = pd.DataFrame(price_data, index=idx)
 
