@@ -43,7 +43,7 @@ st.markdown(
 # Load Bitcoin data from a CSV file
 #@st.cache  # This decorator helps cache the data load for speedup and less reloads
 def load_data():
-    data = pd.read_csv('/Users/jiakaiwu/Documents/ieor courses/243/project/final_raw_data.csv')
+    data = pd.read_csv('final_raw_data.csv')
     data['Date'] = pd.to_datetime(data['Date'])  # Ensure the 'Date' column is datetime type
     return data
 
@@ -349,7 +349,7 @@ else:
     
     #elif trading_section == "5. Transaction Management":
         # Prediction and holding
-    final_forecast = pd.read_csv('/Users/jiakaiwu/Documents/ieor courses/243/project/final_forecast.csv')
+    final_forecast = pd.read_csv('final_forecast.csv')
     final_forecast['Date'] = pd.to_datetime(final_forecast['Date'])
     final_forecast.set_index('Date', inplace = True)
     if 'transactions' not in st.session_state:
@@ -408,7 +408,7 @@ else:
     if st.button("Show Profit/Loss"):
         show_profit_loss(target_date)
     #else:
-    pred_data = pd.read_csv('/Users/jiakaiwu/Documents/ieor courses/243/project/model_pred_actual.csv')
+    pred_data = pd.read_csv('model_pred_actual.csv')
     def trade_sim(expected_return, initial_money):
         money = initial_money
         bitcoins_quantity = 0
