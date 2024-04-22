@@ -305,7 +305,7 @@ elif main_section == 'Crypto Exploration':
 
 else:
     #if trading_section == "4. Prediction Forecast":
-    pred_data = pd.read_csv('/Users/jiakaiwu/Documents/ieor courses/243/project/model_pred_actual.csv')
+    pred_data = pd.read_csv('model_pred_actual.csv')
 
     pred_data2 = pred_data.copy()
     pred_data2['Day'] = pd.to_datetime(pred_data2['Day'], origin='2022-12-01', unit='D')
